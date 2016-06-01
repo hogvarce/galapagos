@@ -1,0 +1,21 @@
+
+<header id="header" layout-wrap="layout-wrap" layout="row" layout-align="end center" layout-padding="layout-padding" class="header">
+	<div hide-gt-xs="hide-gt-xs">
+		<md-button ng-click="mc.toogleSideNav()" aria-label="Menu" class="md-fab">
+			<md-icon md-svg-icon="menu"></md-icon>
+		</md-button>
+	</div>
+	<md-sidenav flex="flex" md-component-id="left" md-is-locked-open="$mdMedia('gt-xs')" class="md-sidenav-top">
+		<ul layout-wrap="layout-wrap" layout-margin="layout-margin" layout="row" layout-xs="column" layout-align="end center">
+			<li>
+				<md-button ng-click="mc.menuLink('/')" class="md-primary md-hue-2">Главная</md-button>
+			</li>
+			<li>
+				<md-button ng-click="mc.menuLink('/photo')" class="md-primary md-hue-2">Фото</md-button>
+			</li>
+			<li>
+				<md-button ng-click="mc.menuLink('/contacts')" class="md-primary md-hue-2">Контакты</md-button>
+			</li>
+		</ul>
+	</md-sidenav>
+</header>

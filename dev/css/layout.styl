@@ -1,0 +1,68 @@
+﻿// this file is interface css.
+
+// - var
+@import "variables.styl"
+
+
+
+
+*
+    margin 0
+    padding 0
+    outline 0
+
+html,
+body
+    height 100%
+
+main
+    height: 100%
+
+[layout-padding]
+    padding: 20px
+
+.container
+    background-color: lighten($colorGray, 12)
+    box-shadow: 2px 2px #EFEFEF
+
+#status-buttons
+    background-color #fff
+    margin-top: 20px
+    border: 1px solid $colorGray
+    padding 40px
+    .progress
+        width: 50%
+        position: relative;
+        top: 23px;
+        display: inline-block
+        margin-left: -10px;
+        margin-right: -10px;
+        z-index: 0;
+    a
+        position: relative;
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        background:  lighten($colorGray, 12);
+        color: #fff
+        border-radius: 50%
+        display: inline-block;
+        line-height: 40px;
+        z-index: 1;
+        text-decoration: none;
+        &.active
+            background-color: #5cb85c
+        &:before
+            position: absolute;
+            content: attr(data-step);
+            display: block;
+            top: -20px
+            font-size: 14px
+            line-height: normal;
+            width: 120px
+            left: -40px;
+
+
+@import "./layout/header.styl"
+@import "./layout/footer.styl"
+@import "../element/css-blocks/b_main_first_block.styl"

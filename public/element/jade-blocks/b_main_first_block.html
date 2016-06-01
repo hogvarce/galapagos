@@ -1,0 +1,19 @@
+
+<main>
+	<md-content class="container">
+		<div id="status-buttons" class="text-center col-xs-6 col-xs-offset-1 col-sm-offset-3"><a ui-sref-active="active" ui-sref="form" data-step="Step one"><span>1</span></a>
+			<uib-progressbar max="fc.max" value="fc.dynamic" type="success"></uib-progressbar><a ui-sref-active="active" ui-sref="form-2" data-step="Step two"><span>2</span></a>{{title}}
+		</div>
+		<div class="clearfix"></div>
+		<form ng-submit="fc.processForm()" name="form" class="md-inline-form">
+			<ui-view layout-wrap="layout-wrap" layout="row" layout-xs="column" layout-padding="layout-padding"></ui-view>
+		</form>
+		<div ng-show="fc.showResult &amp;&amp; form.$valid">
+			<p>Name: {{fc.formData.name}}</p>
+			<p>Age: {{fc.formData.age}}</p>
+			<p>Gender: {{fc.formData.gender}}</p>
+			<p>Phone: {{fc.formData.phone}}</p>
+			<p>Email: {{fc.formData.email}}</p>
+		</div>
+	</md-content>
+</main>

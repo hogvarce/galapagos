@@ -1,0 +1,22 @@
+
+<div class="step-1 col-xs-6">
+	<md-input-container md-no-float="md-no-float" class="md-block">
+		<label for="name">Name</label>
+		<input type="text" name="name" required="required" ng-model="fc.formData.name" ng-required="true"/><span ng-show="form.name.$invalid &amp;&amp; form.name.$touched" class="text-danger">The name must be specified</span>
+	</md-input-container>
+	<md-input-container md-no-float="md-no-float" class="md-block">
+		<label for="age">Age</label>
+		<input type="number" min="15" max="120" name="age" ng-model="fc.formData.age" ng-required="true"/><span ng-show="form.age.$invalid" class="text-danger">Wrong age</span>
+	</md-input-container>
+	<md-radio-group ng-model="fc.formData.gender">
+		<label for="gender">Gender</label>
+		<div class="clearfix"></div>
+		<label class="text-center">
+			<md-radio-button type="radio" name="gender" ng-model="fc.formData.gender" value="male"><span>Male</span></md-radio-button>
+		</label>
+		<label class="text-center">
+			<md-radio-button type="radio" name="gender" ng-model="fc.formData.gender" value="female"><span>Female</span></md-radio-button>
+		</label>
+	</md-radio-group>
+	<div class="clearfix"></div><br/><br/><a ui-sref="form-2" ng-show="form.$valid" ng-disabled="form.$invalid" class="btn btn-block btn-info"><span>Step-2</span></a>
+</div>

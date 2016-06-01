@@ -1,0 +1,7 @@
+doctype html
+html(ng-app="myApp")
+	head
+		include head.jade
+	body(ng-cloak ng-controller="formController as fc" layout="column" layout-align="space-between stretch")
+			block content 
+			include scripts

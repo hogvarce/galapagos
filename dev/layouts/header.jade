@@ -1,0 +1,13 @@
+header#header.header(layout-wrap layout="row"  layout-align="end center" layout-padding)
+    div(hide-gt-xs)
+        md-button(ng-click="mc.toogleSideNav()" aria-label="Menu").md-fab
+            md-icon(md-svg-icon="menu")
+    md-sidenav(flex md-component-id="left" md-is-locked-open="$mdMedia('gt-xs')").md-sidenav-top
+        ul(layout-wrap layout-margin layout="row" layout-xs="column" layout-align="end center")
+            li
+                md-button.md-primary.md-hue-2(ng-click="mc.menuLink('/')") Главная
+            li
+                md-button.md-primary.md-hue-2(ng-click="mc.menuLink('/photo')") Фото
+            li
+                md-button.md-primary.md-hue-2(ng-click="mc.menuLink('/contacts')") Контакты
+            

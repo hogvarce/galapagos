@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+html,
+body {
+  height: 100%;
+}
+main {
+  height: 100%;
+}
+[layout-padding] {
+  padding: 20px;
+}
+.container {
+  background-color: #f2f3f4;
+  box-shadow: 2px 2px #efefef;
+}
+#status-buttons {
+  background-color: #fff;
+  margin-top: 20px;
+  border: 1px solid #d2d5d7;
+  padding: 40px;
+}
+#status-buttons .progress {
+  width: 50%;
+  position: relative;
+  top: 23px;
+  display: inline-block;
+  margin-left: -10px;
+  margin-right: -10px;
+  z-index: 0;
+}
+#status-buttons a {
+  position: relative;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  background: #f2f3f4;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 40px;
+  z-index: 1;
+  text-decoration: none;
+}
+#status-buttons a.active {
+  background-color: #5cb85c;
+}
+#status-buttons a:before {
+  position: absolute;
+  content: attr(data-step);
+  display: block;
+  top: -20px;
+  font-size: 14px;
+  line-height: normal;
+  width: 120px;
+  left: -40px;
+}
+.header .md-button {
+  width: 100%;
+}
+.step-1 input[type="radio"] {
+  margin: -5px 5px 0px 10px;
+}

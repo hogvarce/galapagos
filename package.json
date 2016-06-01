@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-cssbeautify": "^0.1.3",
+    "gulp-imagemin": "",
+    "gulp-jade": "^0.10.0",
+    "gulp-livereload": "~2.1.1",
+    "gulp-stylus": "^1.3.4",
+    "gulp-typescript": "^2.13.5",
+    "gulp-webserver": "^0.9.0",
+    "gulp.spritesmith": "",
+    "jade": "1.9.2"
+  },
+  "devDependencies": {
+    "gulp-csso": "^1.0.0",
+    "gulp-livereload": "^2.1.1",
+    "gulp-sourcemaps": "~1.5.2",
+    "gulp-uglify": "^1.5.1",
+    "wiredep": "^4.0.0"
+  },
+  "name": "sauber-deposit",
+  "version": "1.0.1",
+  "description": "landing page bank \"Sauber\"",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hogvarce/galapagos"
+  },
+  "author": "hogvarce",
+  "license": "ISC"
+}

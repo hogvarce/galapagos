@@ -1,0 +1,15 @@
+.step-2.col-xs-6
+    md-input-container.md-block(md-no-float)
+        label(for="phone") Phone
+        input(type="tel" name="phone" required ng-model="fc.formData.phone")
+        span.text-danger(ng-show="form.phone.$invalid && form.phone.$touched") The phone must be specified
+    md-input-container.md-block(md-no-float)
+        label(for="email") Email
+        input(type="email" required name="email" ng-model="fc.formData.email")
+        span.text-danger(ng-show="form.email.$invalid && form.email.$touched") The email must be specified
+    .clearfix
+    br
+    br
+    a(ui-sref="form").btn.btn-info.col-xs-5
+        span Step-1
+    button(type="submit" ng-disabled="form.$invalid").btn.btn-danger.col-xs-5.col-xs-offset-2 Submit
