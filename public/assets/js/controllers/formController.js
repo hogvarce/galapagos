@@ -11,17 +11,13 @@ var app;
                 gender: 'male'
             };
             this.dynamic = 0;
-            this.max = 100;
             var self = this;
         }
-        // addProgress():void{
-        //     this.dynamic = 100;
-        // }
-        //
-        // removeProgress():void{
-        //     this.dynamic = 0;
-        // }
+        formController.prototype.addProgress = function () {
+            this.dynamic = 100;
+        };
         formController.prototype.processForm = function () {
+            this.addProgress();
             if (this.formData.name != "")
                 this.showResult = true;
             else

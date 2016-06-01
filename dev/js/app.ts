@@ -1,6 +1,15 @@
 module app {
     angular.module('myApp', ['ngAnimate', 'ui.router', 'ui.bootstrap', 'ngMaterial', 'ngMessages'])
     .controller('formController', formController)
+    .directive('progressbar', function (): ng.IDirective{
+        return {
+            restrict: 'EAC',
+            scope: {
+                dynamic: "="
+            },
+            templateUrl: 'element/jade-blocks/progress.html',
+        }
+    })
     .config((
          $stateProvider: ng.ui.IStateProvider,
          $urlRouterProvider: ng.ui.IUrlRouterProvider,
@@ -10,7 +19,7 @@ module app {
                     url: '/form/steps/one',
                     templateUrl: 'element/jade-blocks/form.html',
                     onEnter: ()=>{
-                        $('.progress-bar').css({'width':'0'});
+                        $('.progress-bar').css({'width':'0%'})
                     },
                     onExit: ()=>{
                         $('.progress-bar').css({'width':'100%'});

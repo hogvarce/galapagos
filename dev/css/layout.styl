@@ -52,6 +52,8 @@ main
         text-decoration: none;
         &.active
             background-color: #5cb85c
+            &:before
+                color: #000;
         &:before
             position: absolute;
             content: attr(data-step);
@@ -61,6 +63,7 @@ main
             line-height: normal;
             width: 120px
             left: -40px;
+            color: $colorGray;
 
 
 @import "./layout/header.styl"

@@ -1,10 +1,7 @@
 
 <main>
 	<md-content class="container">
-		<div id="status-buttons" class="text-center col-xs-6 col-xs-offset-1 col-sm-offset-3"><a ui-sref-active="active" ui-sref="form" data-step="Step one"><span>1</span></a>
-			<uib-progressbar max="fc.max" value="fc.dynamic" type="success"></uib-progressbar><a ui-sref-active="active" ui-sref="form-2" data-step="Step two"><span>2</span></a>{{title}}
-		</div>
-		<div class="clearfix"></div>
+		<progressbar dynamic="fc.dynamic"></progressbar>
 		<form ng-submit="fc.processForm()" name="form" class="md-inline-form">
 			<ui-view layout-wrap="layout-wrap" layout="row" layout-xs="column" layout-padding="layout-padding"></ui-view>
 		</form>

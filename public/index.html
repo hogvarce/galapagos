@@ -11,7 +11,7 @@
 		<link href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic" rel="stylesheet" type="text/css">
 		<!-- bower:css-->
 		<link rel="stylesheet" href="/bower_components/angular-material/angular-material.css" />
-		<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
 		<!-- endbower-->
 		<link rel="stylesheet" href="/assets/css/css.css">
 		<style>
@@ -31,10 +31,7 @@
 	<body ng-cloak ng-controller="formController as fc" layout="column" layout-align="space-between stretch">
 		<main>
 			<md-content class="container">
-				<div id="status-buttons" class="text-center col-xs-6 col-xs-offset-1 col-sm-offset-3"><a ui-sref-active="active" ui-sref="form" data-step="Step one"><span>1</span></a>
-					<uib-progressbar max="fc.max" value="fc.dynamic" type="success"></uib-progressbar><a ui-sref-active="active" ui-sref="form-2" data-step="Step two"><span>2</span></a>{{title}}
-				</div>
-				<div class="clearfix"></div>
+				<progressbar dynamic="fc.dynamic"></progressbar>
 				<form ng-submit="fc.processForm()" name="form" class="md-inline-form">
 					<ui-view layout-wrap layout="row" layout-xs="column" layout-padding></ui-view>
 				</form>

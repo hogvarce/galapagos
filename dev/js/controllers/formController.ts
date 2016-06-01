@@ -17,17 +17,13 @@ module app {
         };
 
         dynamic: number = 0;
-        max: number = 100;
 
-        // addProgress():void{
-        //     this.dynamic = 100;
-        // }
-        //
-        // removeProgress():void{
-        //     this.dynamic = 0;
-        // }
+        addProgress():void{
+            this.dynamic = 100;
+        }
 
         processForm():void{
+            this.addProgress();
             if (this.formData.name != "")
                 this.showResult = true;
             else

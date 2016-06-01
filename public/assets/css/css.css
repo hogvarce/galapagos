@@ -48,6 +48,9 @@ main {
 #status-buttons a.active {
   background-color: #5cb85c;
 }
+#status-buttons a.active:before {
+  color: #000;
+}
 #status-buttons a:before {
   position: absolute;
   content: attr(data-step);
@@ -57,6 +60,7 @@ main {
   line-height: normal;
   width: 120px;
   left: -40px;
+  color: #d2d5d7;
 }
 .header .md-button {
   width: 100%;
