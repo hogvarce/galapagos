@@ -1,11 +1,18 @@
 module app {
     export class formController {
-        static $inject = ['$location', '$stateParams'];
+        static $inject = ['$location', '$stateParams', '$scope'];
         constructor(
             private $location,
-            private $stateParams
+            private $stateParams,
+            private $scope
         ){
             var self = this;
+            this.$scope.$on(
+                    "$locationChangeSuccess",
+                    function handleLocationChangeSuccessEvent( event ) {
+                        self.dynamic = (self.$location.path() == '/form/steps/one') ? 0 : 100;
+                    }
+                );
         }
 
         showResult: boolean = false;
@@ -15,15 +22,10 @@ module app {
             age: 20,
             gender: 'male'
         };
-
-        dynamic: number = 0;
-
-        addProgress():void{
-            this.dynamic = 100;
-        }
+        step: string = '1';
+        dynamic: number = (this.$location.path() == '/form/steps/one') ? 0 : 100;
 
         processForm():void{
-            this.addProgress();
             if (this.formData.name != "")
                 this.showResult = true;
             else

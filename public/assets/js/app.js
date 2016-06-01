@@ -16,27 +16,21 @@ var app;
             .state('form', {
             url: '/form/steps/one',
             templateUrl: 'element/jade-blocks/form.html',
-            onEnter: function () {
-                $('.progress-bar').css({ 'width': '0%' });
-            },
-            onExit: function () {
-                $('.progress-bar').css({ 'width': '100%' });
-            }
+            controller: 'formController'
         })
             .state('form-2', {
             url: '/form/steps/two',
             templateUrl: 'element/jade-blocks/form-2.html',
+            controller: 'formController',
             onEnter: function () {
                 setTimeout(function () {
-                    $('#status-buttons a').eq(0).addClass('active').html('<i class="fa fa-check" aria-hidden="true"></i>');
+                    $('#status-buttons a').eq(0).html('<i class="fa fa-check" aria-hidden="true"></i>').addClass('active');
                 }, 0);
-                $('.progress-bar').css({ 'width': '100%' });
             },
             onExit: function () {
                 setTimeout(function () {
                     $('#status-buttons a').eq(0).html('<span>1</span>');
                 }, 0);
-                $('.progress-bar').css({ 'width': '0%' });
             }
         });
         $urlRouterProvider.otherwise('/form/steps/one');
